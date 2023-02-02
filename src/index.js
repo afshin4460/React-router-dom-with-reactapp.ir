@@ -12,6 +12,11 @@ root.render(
       <Route path='/' element={<App />}>
         <Route path='invoices' element={<Invoices />} />
         <Route path='expenses' element={<Expenses />} />
+        <Route path='*' element={
+          <main style={{padding: '1rem'}}>
+            <p>Theres Noting Here</p>
+          </main>
+        } />
       </Route>
     </Routes>
   </Router>
