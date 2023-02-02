@@ -12,6 +12,11 @@ root.render(
     <Routes>
       <Route path='/' element={<App />}>
         <Route path='invoices' element={<Invoices />}>
+          <Route index element={
+            <main style={{padding:'1rem'}}>
+              <h3>Slecte an Invoice</h3>
+            </main>
+          } />
           <Route path=':invoiceId' element={<Invoice />} /> 
         </Route>
         <Route path='expenses' element={<Expenses />} />
