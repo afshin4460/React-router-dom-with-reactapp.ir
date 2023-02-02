@@ -14,7 +14,7 @@ root.render(
         <Route path='invoices' element={<Invoices />}>
           <Route index element={
             <main style={{padding:'1rem'}}>
-              <h3>Slecte an Invoice</h3>
+              <h3>Selecte an Invoice</h3>
             </main>
           } />
           <Route path=':invoiceId' element={<Invoice />} /> 

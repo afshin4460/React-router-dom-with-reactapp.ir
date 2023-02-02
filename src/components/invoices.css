@@ -1,0 +1,13 @@
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.link {
+    display: block;
+    margin: 1rem;
+    text-decoration: none;
+}
