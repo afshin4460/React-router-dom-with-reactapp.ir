@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Outlet} from 'react-router-dom';
+import {NavLink, Outlet} from 'react-router-dom';
 import {getInvoices} from '../data';
 
 function Invoices() {
@@ -9,9 +9,15 @@ function Invoices() {
             <nav style={{borderRight: '1px solid', padding: '1rem'}}>
                 {
                     invoices.map(invoice => (
-                        <Link key={invoice.number} to={`/invoices/${invoice.number}`} style={{display: 'block', margin: '1rem 0'}}>
+                        <NavLink key={invoice.number} to={`/invoices/${invoice.number}`} style={({isActive}) => {
+                            return {
+                                display: 'block',
+                                margin: '1rem',
+                                color: isActive ? 'red' : ''
+                            }
+                        }}>
                             { invoice.name }
-                        </Link>
+                        </NavLink>
                     ))
                 }
             </nav>
