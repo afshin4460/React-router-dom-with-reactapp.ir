@@ -40,3 +40,9 @@ export function getInvoice(number) {
     invoice.number === number
   ));
 }
+
+export function deleteInvoice(number) {
+  return invoices.find(invoice => (
+    invoice.number !== number
+  ));
+}
